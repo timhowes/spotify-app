@@ -1,4 +1,4 @@
-VERSION=1.0.33.106.g60b5d1f0-22
+VERSION=1.0.34.146.g28f9eda2-19
 DEBNAME=spotify-client_$(VERSION)_amd64.deb
 
 all: repo data.tar.gz com.spotify.Client.json
