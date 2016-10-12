@@ -4,6 +4,7 @@
     "runtime-version": "1.4",
     "sdk": "org.freedesktop.Sdk",
     "command": "spotify",
+    "separate-locales": false,
     "finish-args": [
         /* X11 + XShm access */
         "--share=ipc", "--socket=x11",
@@ -13,7 +14,8 @@
         "--share=network",
         /* Media keys: */
         "--talk-name=org.gnome.SettingsDaemon",
-        "--own-name=org.mpris.MediaPlayer2.spotify"
+        "--own-name=org.mpris.MediaPlayer2.spotify",
+        "--extra-data=spotify.deb:a0905dbf02657996356e4779dac9554f8679c3e7cb52c6f867213c91385b1956:75021350::http://repository.spotify.com/pool/non-free/s/spotify-client/spotify-client_1.0.38.171.g5e1cd7b2-22_amd64.deb"
     ],
     "build-options" : {
         "cflags": "-O2 -g",
@@ -106,20 +108,18 @@
             "no-autogen": true,
             "sources" : [
                 {
-                    "type": "archive",
-                    "path": "data.tar.gz"
+                    "type": "file",
+                    "path": "apply_extra"
+                },
+                {
+                    "type": "file",
+                    "path": "spotify.sh"
                 },
                 {
                     "type": "file",
                     "path": "spotify-Makefile",
                     "dest-filename": "Makefile"
                 }
-            ],
-            "post-install": [
-                "mkdir -p /app/share/applications/ /app/share/icons/hicolor/256x256/apps/",
-                "sed s/Icon=spotify-client/Icon=com.spotify.Client/ /app/share/spotify/spotify.desktop > /app/share/applications/com.spotify.Client.desktop",
-                "echo StartupWMClass=Spotify >> /app/share/applications/com.spotify.Client.desktop",
-                "cp /app/share/spotify/icons/spotify-linux-256.png /app/share/icons/hicolor/256x256/apps/com.spotify.Client.png"
             ]
         }
     ]

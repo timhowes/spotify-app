@@ -1,0 +1,12 @@
+#!/bin/sh
+ar x spotify.deb
+rm -f spotify.deb
+tar xf data.tar.gz
+rm -f 16:26 control.tar.gz data.tar.gz debian-binary
+mv usr/* .
+rmdir usr
+mkdir -p export/share/applications
+sed s/Icon=spotify-client/Icon=com.spotify.Client/ share/spotify/spotify.desktop > export/share/applications/com.spotify.Client.desktop
+echo StartupWMClass=Spotify >> export/share/applications/com.spotify.Client.desktop
+mkdir -p export/share/icons/hicolor/256x256/apps
+cp share/spotify/icons/spotify-linux-256.png export/share/icons/hicolor/256x256/apps/com.spotify.Client.png
