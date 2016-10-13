@@ -2,7 +2,7 @@
 ar x spotify.deb
 rm -f spotify.deb
 tar xf data.tar.gz
-rm -f 16:26 control.tar.gz data.tar.gz debian-binary
+rm -f control.tar.gz data.tar.gz debian-binary
 mv usr/* .
 rmdir usr
 mkdir -p export/share/applications
