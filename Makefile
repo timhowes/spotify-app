@@ -25,3 +25,6 @@ gpg-key:
 	mkdir -p gpg
 	gpg2 --homedir gpg --quick-gen-key ${KEY_USER}
 	echo Enter the above gpg key id as RELEASE_GPG_KEY in Makefile.config
+
+spotify.flatpakref: spotify.flatpakref.in
+	sed -e 's|@URL@|${URL}|g' -e 's|@GPG@|$(shell gpg2 --homedir=gpg --export ${RELEASE_GPG_KEY} | base64 | tr -d '\n')|' $< > $@

@@ -3,6 +3,7 @@
     "runtime": "org.freedesktop.Platform",
     "runtime-version": "1.4",
     "sdk": "org.freedesktop.Sdk",
+    "branch": "master",
     "command": "spotify",
     "separate-locales": false,
     "finish-args": [
