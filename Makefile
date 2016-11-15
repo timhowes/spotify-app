@@ -1,9 +1,6 @@
 include Makefile.config
 
 all: test
-	rm -rf spotify
-	flatpak-builder --repo=repo spotify --gpg-sign=E565802D84594CE336CB1E086A7C5D4482170E3D com.spotify.Client.json
-	flatpak build-update-repo --gpg-sign=E565802D84594CE336CB1E086A7C5D4482170E3D repo
 
 test: repo com.spotify.Client.json
 	flatpak-builder --force-clean --repo=repo --ccache --require-changes spotify com.spotify.Client.json
