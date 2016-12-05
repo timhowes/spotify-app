@@ -5,7 +5,7 @@ Branch=master
 Url=@URL@
 IsRuntime=False
 GPGKey=@GPG@
-
+RuntimeRepo=https://sdk.gnome.org/gnome.flatpakrepo
 Comment=Spotify
 Description=Linux version of the spotify client
 Icon=https://developer.spotify.com/wp-content/uploads/2016/07/icon1@2x.png
