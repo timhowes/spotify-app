@@ -16,7 +16,7 @@
         /* Media keys: */
         "--talk-name=org.gnome.SettingsDaemon",
         "--own-name=org.mpris.MediaPlayer2.spotify",
-        "--extra-data=spotify.deb:7b68ede2428634b2fa1cca0bb13a73821b3a803774aa89f07b1af96622767ee2:73159678::http://repository.spotify.com/pool/non-free/s/spotify-client/spotify-client_1.0.44.100.ga60c0ce1-89_amd64.deb"
+        "--extra-data=spotify.deb:098ea8b392f9e0e9b7eccc6d8b8768d2071f8120514772c4e20580e460ffa872:71687592::http://repository.spotify.com/pool/non-free/s/spotify-client/spotify-client_1.0.44.100.ga60c0ce1-89_amd64.deb"
     ],
     "build-options" : {
         "cflags": "-O2 -g",
