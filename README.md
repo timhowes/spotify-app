@@ -1,4 +1,4 @@
-This repo contains a working version of the spotify x86-64 linux client packaged as an xdg-app.
+This repo contains a working version of the spotify x86-64 linux client packaged as an flatpak.
 
 There is a pre-build version available, which you can install with:
 ```
