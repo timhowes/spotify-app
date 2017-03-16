@@ -13,6 +13,8 @@
         "--socket=pulseaudio",
         /* Network access */
         "--share=network",
+        /* OpenGL */
+        "--device=dri",
         /* Media keys: */
         "--talk-name=org.gnome.SettingsDaemon",
         "--own-name=org.mpris.MediaPlayer2.spotify",
