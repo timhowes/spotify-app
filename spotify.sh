@@ -1,3 +1,3 @@
 #!/bin/sh
 
-exec /app/extra/bin/spotify
+exec /app/extra/bin/spotify "$@"
